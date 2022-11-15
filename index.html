@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ASSIGNMENT</title>
+</head>
+
+<body>
+    <script>
+//         Exercise 1:
+// Write a JavaScript program to extract the first half of a given array and show the output in new
+// variable "categories_firsthalf"
+//  let categories = ["Health", "Fashion", "Toys", "Electronic", "TV", "Sports", "Watches", "Motorbike", "Home and Lifestyle", "Devices"]
+
+// function first_half (str) {
+//   if (str.length % 2 == 0) {
+//     return str.slice(0, str.length / 2);
+//   }
+//   return str;
+// }
+// console.log(first_half("[&quot;Health&quot"));  
+// console.log(first_half("&quot;Fashion&quot")); 
+// console.log(first_half("&quot;Toys&quot"));
+// console.log(first_half("&quot;Electronic&quot"));
+// console.log(first_half("&quot;Watches&quot"));
+
+
+let categories = ["Health", "Fashion", "Toys", "Electronic", "TV", "Sports", "Watches", "Motorbike", "Home and Lifestyle", "Devices"]
+// ---------------splice
+
+//half store in new variable const
+const del = categories.splice(1,5)
+
+console.log("store in new varible",del);
+
+// Exercise 2:
+// Write a JavaScript program to concatenate two array except their first index.
+// const str1 = ["Apple", "Bananna", "Orange", "Grapes"]
+// const str2 = ["abc" , "def", "ghi", "jkl"]
+const str = []
+const str1 = ["Apple", "Bananna", "Orange", "Grapes"]
+ const str2 = ["abc" , "def", "ghi", "jkl"]
+ const concate= str.concat(str1.slice(1,4),str2.slice(1,4));
+ console.log(concate);
+ console.log("Concate variable is",concate.length);
+
+//  Exercise 3:
+// Write a JavaScript program to sort the given array in ascending and descending order.
+// const NumericArray = ['80', '9', '700', 40, 1, 5, 200];
+//Sort in Ascending order
+let arr1 = (a,b)=>{
+        return a-b
+    }
+
+      const NumericArray = [0, 9, 700, 40, 1, 5, 200];
+      NumericArray.sort(arr1)
+    console.log("Sort in ascending order",NumericArray)
+    //
+// / Sort in Descending order
+let arr2 = (a,b)=>{
+        return b-a
+    }
+
+      const NumericsArray = [0, 9, 700, 40, 1, 5, 200];
+      NumericsArray.sort(arr2)
+    console.log("Sort in descending order",NumericsArray)
+//     Exercise 4:
+// Write a JavaScript program to add "Feb" at the index 1.
+// const months = ["Jan", "March", "April", "Dec"];
+// Now remove "Dec" from the array and add "May", "June" in the replacement of "Dec"
+const months = ["Jan", "March", "April", "Dec"];
+
+    months.splice(1,0,"Feb");
+    console.log("Add feb at index 1", months)
+    console.log( months.length) 
+    months.splice(4,5,"May","June");
+    console.log("remove dec", months)
+
+//     Exercise 5:
+// Write a JavaScript program to join given array with " and "
+// let joinarr = ["Me", "my family"]
+
+let joinarr = ["Me", "my family"]
+    console.log(joinarr.join(" and "))
+
+
+//     Exercise 6:
+// Write JS Condition for the following conditions:
+
+
+
+
+
+
+//  1. number greater than 2 and less than 10 then result should be "Number is between 2 and 10"
+const num = 5;
+
+const low = 2;
+const high = 10;
+
+if (num >low  && num < high) {
+  console.log('num is between 2 and 10');
+} else {
+  console.log(' num is NOT between 2 and 10');
+}
+//  2. number greater than 10 and less than 19 then reult should be "Number is between 10 and 19"
+const nums = 50;
+const lows = 19;
+const highs = 10;
+
+if (num >lows  && num < highs) {
+  console.log('num is between greater than 10 between less than 19');
+} else {
+  console.log('num is not between greater than 10 between less than 19');
+}
+//  3. number greater than 19 and less than 30 then reult should be "Number is between 19 and 29"
+const numb = 29;
+const lowsb = 30;
+const highy = 19;
+
+if (num >lows  && num < highs) {
+  console.log('num is between greater than 19 between less than 30');
+} else {
+  console.log('num is between greater than 19 between less than 30');
+}
+//  4. If selection is not in these values then result should be "Sorry try again"
+const numr = 50;
+const lowg = 30;
+const highf = 19;
+
+if (num >lows  && num < highs) {
+  console.log('num is between greater than 19 between less than 30');
+} else {
+  console.log('sorry try again');
+}
+    </script>
+
+</body>
+
+</html>
